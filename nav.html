@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Lato', sans-serif;
+			padding: 6px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #545454;
+			text-decoration: none;
+			text-transform: none;
+			display: inline-block;
+			padding: 8px;
+			letter-spacing: 3px;
+		}
+
+		.background {
+			background-color: #faf0ed;
+		}
+
+		.border {
+			border: 0px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #CF6F54;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+		<a id="Inicio" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house-chimney" style="color: #cf6f57;"></i> Início</a>
+		<a id="Gestão do Cuidado" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-gears" style="color: #cf6f57;"></i> Gestão do Cuidado</a>
+		<a id="Plano LPL" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-compass" style="color: #cf6f54;"></i> Plano LPL</a> 
+		<a id="Agenda" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-days" style="color: #cf6f57;"></i> Agenda</a>
+		<a id="Geral" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart-circle-bolt" style="color: #cf6f57;"></i> Geral</a>
+		<a id="Finanças" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-hand-holding-dollar" style="color: #cf6f57;"></i> Finanças</a>
+		<a id="Banco de Referências" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-brain" style="color: #cf6f57;"></i> Banco de Referências</a>
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'Inicio')
+				window.open("https://inicio.com", '_blank').focus();
+			else if (id == "Gestão do Cuidado")
+				window.open("https://gestaodocuidado.com", '_blank').focus();
+			else if (id == "Plano LPL")
+				window.open("https://planolpl.com", '_blank').focus();
+			else if (id == "Agenda")
+				window.open("https://agenda.com", '_blank').focus();
+			else if (id == "Geral")
+				window.open("https://geral.com", '_blank').focus();
+			else if (id == "Finanças")
+				window.open("https://financas.com", '_blank').focus();
+			else if (id == "Banco de Referências")
+				window.open("https://bancodereferencias.com", '_blank').focus();
+			
+		}
+	</script>
+
+
+</body>
+
+</html>
